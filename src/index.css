@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-desktop: var(--bg-desktop);
+  --color-bg-window: var(--bg-window);
+  --color-bg-taskbar: var(--bg-taskbar);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+}
+
+@keyframes glisten {
+  0% { filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.4)) brightness(1); }
+  50% { filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.9)) brightness(1.3); }
+  100% { filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.4)) brightness(1); }
+}
+.animate-glisten {
+  animation: glisten 2s infinite ease-in-out;
+}
+
+:root {
+  --bg-desktop: #000000;
+  --bg-window: #111111;
+  --bg-taskbar: #0a0a0a;
+  --text-primary: #ffffff;
+  --text-secondary: #a1a1aa;
+  --accent: #ffffff;
+  --accent-hover: #d4d4d8;
+}
+
+.theme-ocean {
+  --bg-desktop: #00050a;
+  --bg-window: #00101f;
+  --bg-taskbar: #00050a;
+  --text-primary: #e0f2fe;
+  --text-secondary: #7dd3fc;
+  --accent: #38bdf8;
+  --accent-hover: #0284c7;
+}
+
+.theme-midnight {
+  --bg-desktop: #020617;
+  --bg-window: #0f172a;
+  --bg-taskbar: #020617;
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --accent: #818cf8;
+  --accent-hover: #6366f1;
+}
+
+.theme-sakura {
+  --bg-desktop: #1a0b1c;
+  --bg-window: #2d1b2e;
+  --bg-taskbar: #1a0b1c;
+  --text-primary: #fdf2f8;
+  --text-secondary: #fbcfe8;
+  --accent: #f472b6;
+  --accent-hover: #ec4899;
+}
+
+.theme-emerald {
+  --bg-desktop: #022c22;
+  --bg-window: #064e3b;
+  --bg-taskbar: #022c22;
+  --text-primary: #ecfdf5;
+  --text-secondary: #a7f3d0;
+  --accent: #34d399;
+  --accent-hover: #10b981;
+}
+
+.theme-sunset {
+  --bg-desktop: #1a0b12;
+  --bg-window: #2d1422;
+  --bg-taskbar: #1a0b12;
+  --text-primary: #fff0f5;
+  --text-secondary: #fca5a5;
+  --accent: #f97316;
+  --accent-hover: #ea580c;
+}
+
+.theme-cyberpunk {
+  --bg-desktop: #09090b;
+  --bg-window: #18181b;
+  --bg-taskbar: #09090b;
+  --text-primary: #fef08a;
+  --text-secondary: #a78bfa;
+  --accent: #f472b6;
+  --accent-hover: #ec4899;
+}
+
+.theme-dracula {
+  --bg-desktop: #282a36;
+  --bg-window: #44475a;
+  --bg-taskbar: #282a36;
+  --text-primary: #f8f8f2;
+  --text-secondary: #6272a4;
+  --accent: #ff79c6;
+  --accent-hover: #bd93f9;
+}
+
+.theme-hacker {
+  --bg-desktop: #000000;
+  --bg-window: #050505;
+  --bg-taskbar: #000000;
+  --text-primary: #4ade80;
+  --text-secondary: #166534;
+  --accent: #22c55e;
+  --accent-hover: #16a34a;
+}
+
+.theme-monochrome {
+  --bg-desktop: #000000;
+  --bg-window: #111111;
+  --bg-taskbar: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #888888;
+  --accent: #ffffff;
+  --accent-hover: #cccccc;
+}
+
+body {
+  background-color: var(--bg-desktop);
+  color: var(--text-primary);
+  overflow: hidden;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+.stars-bg {
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 50px 160px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 90px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 130px 80px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 250px 250px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 300px 150px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(1px 1px at 400px 80px, #ffffff, rgba(0,0,0,0));
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  opacity: 0.15;
+}
+
+.grid-overlay {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

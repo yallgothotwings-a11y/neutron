@@ -1,0 +1,5 @@
+{
+  "name": "Neutron",
+  "description": "A sleek virtual desktop interface with a proxy browser, chat, and games.",
+  "requestFramePermissions": []
+}
